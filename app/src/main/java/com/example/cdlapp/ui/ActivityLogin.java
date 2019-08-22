@@ -1,4 +1,4 @@
-package Model;
+package com.example.cdlapp.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,34 +14,37 @@ import com.example.cdlapp.R;
 public class ActivityLogin extends AppCompatActivity {
     EditText name;
     EditText pass;
-    Button btn1,btn2 ;
+    Button btn1, btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
-        name=(EditText)findViewById(R.id.username);
-        pass=(EditText)findViewById(R.id.password);
-        btn1=(Button)findViewById(R.id.login);
-        btn2=(Button)findViewById(R.id.NewUser);
+        name = findViewById(R.id.email);
+        pass = findViewById(R.id.password);
+        btn1 = findViewById(R.id.login);
+        btn2 = findViewById(R.id.signUp);
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (name.getText().toString().equals("Jannet")&&pass.getText().toString().equals("1234"))
-                { Intent i = new Intent(ActivityLogin.this,HomeActivity.class);
-                startActivity(i);}
-                else {
-                    Toast.makeText(ActivityLogin.this,"Wrong username and password",Toast.LENGTH_LONG).show();
-                }
-
-
+                // if (name.getText().toString().equals("Jannet")&&pass.getText().toString().equals("1234"))
+                // { I should verify if it is a correct email (existing already in the base +password : Api from hedi
+                Intent i = new Intent(ActivityLogin.this, HomeActivity.class);
+                startActivity(i);
             }
+            //  else {Toast.makeText(ActivityLogin.this,"Wrong username and password",Toast.LENGTH_LONG).show();
+            //}
+
+
+            // }
 
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(ActivityLogin.this,ActivityFormulaire.class);
+                Intent i = new Intent(ActivityLogin.this, ActivityFormulaire.class);
                 startActivity(i);
             }
         });
