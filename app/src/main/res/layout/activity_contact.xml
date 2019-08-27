@@ -1,45 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/contact"
-   tools:context=".ui.ActivityContact">
+    android:background="@drawable/lfou"
+    tools:context=".ui.ActivityContact">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_width="419dp"
+        android:layout_height="356dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-4dp">
 
-        <ImageView
-            android:layout_width="28dp"
-            android:layout_height="34dp"
-            android:layout_alignStart="@+id/null"
-            android:src="@drawable/ml" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="36dp"
-            android:layout_height="42dp"
-            android:src="@drawable/adressse" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/phonr" />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:src="@drawable/site" />
+            <TextView
+                android:id="@+id/fb"
+                android:layout_width="234dp"
+                android:layout_height="35dp"
+                android:text="@string/Link_to_Fb" />
+        </LinearLayout>
 
-        <ImageView
-            android:layout_width="51dp"
-            android:layout_height="48dp"
-            android:src="@drawable/lin" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="102dp"
-            android:layout_height="105dp"
-            android:src="@drawable/fb" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/phonr" />
 
+            <TextView
+                android:id="@+id/site"
+                android:layout_width="234dp"
+                android:layout_height="35dp"
+                android:text="@string/Link_to_site" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/phonr" />
+
+            <TextView
+                android:id="@+id/in"
+                android:layout_width="234dp"
+                android:layout_height="35dp"
+
+                android:text="@string/Link_to_in" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/phonr" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="231dp"
+                android:layout_height="33dp"
+
+                android:text="+216 70 028 343 / +216 54 137 708" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/phonr" />
+
+            <TextView
+                android:id="@+id/mail"
+                android:layout_width="213dp"
+                android:layout_height="38dp"
+
+                android:text="contact@creativedigital-lab.tn " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/phonr" />
+
+            <TextView
+                android:id="@+id/adr"
+                android:layout_width="266dp"
+                android:layout_height="42dp"
+
+                android:text="Avenue Mohamed 5, Tunis 2022,Tunisie Cité de la Culture" />
+        </LinearLayout>
     </LinearLayout>
 
+    <!--TextView
+        android:id="@+id/site"
+        android:layout_width="232dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="398dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/Link_to_site"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_conversion_wrapHeight="123"
+        tools:layout_conversion_wrapWidth="349" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/in"
+        android:layout_width="234dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="448dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/Link_to_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_conversion_wrapHeight="123"
+        tools:layout_conversion_wrapWidth="349" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="231dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="+216 70 028 343 / +216 54 137 708"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714"
+        tools:layout_conversion_wrapHeight="123"
+        tools:layout_conversion_wrapWidth="349" />
+
+    <TextView
+        android:id="@+id/fb"
+        android:layout_width="240dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/Link_to_Fb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.777"
+        tools:layout_conversion_wrapHeight="123"
+        tools:layout_conversion_wrapWidth="349" />
+
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="213dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="contact@creativedigital-lab.tn "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.853"
+        tools:layout_conversion_wrapHeight="123"
+        tools:layout_conversion_wrapWidth="349" />
+
+    <TextView
+        android:id="@+id/adr"
+        android:layout_width="266dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Avenue Mohamed 5, Tunis 2022,Tunisie Cité de la Culture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925"
+        tools:layout_conversion_wrapHeight="123"
+        tools:layout_conversion_wrapWidth="349" /-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

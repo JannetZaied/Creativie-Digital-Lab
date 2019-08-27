@@ -14,20 +14,17 @@
     tools:context=".ui.ActivityLogin"
     >
 
-    <Button
+    <ImageButton
         android:id="@+id/login"
-        android:layout_width="44dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.827"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="36dp"
+
+        android:src="@drawable/loginbutton"
         app:layout_constraintStart_toEndOf="@+id/signUp"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.466" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
         android:id="@+id/signUp"
@@ -49,20 +46,20 @@
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="384dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
 
+        android:inputType="textEmailAddress"
         android:textColor="@android:color/black"
         android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintHorizontal_bias="0.91"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.969" />
+        app:layout_constraintVertical_bias="0.006" />
 
     <EditText
         android:id="@+id/password"
@@ -77,10 +74,10 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.617" />
+        app:layout_constraintVertical_bias="0.69" />
 
 
 

@@ -9,4 +9,13 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string name="Link_to_in">
+    <a href="https://www.linkedin.com/company/creative-digital-lab-tn"> creative-digital-lab-tn</a></string>
+    <string name="Link_to_site">
+    <a href="http://creativedigital-lab.tn/"> creativedigital-lab.tn</a></string>
+    <string name="Link_to_Fb">
+    <a href="https://www.facebook.com/CreativeDigitalLab/"> CreativeDigitalLab</a></string>
+
+
 </resources>
