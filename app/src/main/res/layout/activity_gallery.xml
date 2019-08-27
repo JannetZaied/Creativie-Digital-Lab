@@ -8,10 +8,48 @@
     android:background="@drawable/lfou"
     tools:context=".ui.ActivityGallery">
 
-    <HorizontalScrollView
-        android:layout_width="408dp"
-        android:layout_height="297dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
 
+
+        app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499">
+
+        <Button
+            android:id="@+id/aboutus"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="About US" />
+
+        <Button
+            android:id="@+id/contact"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:text="Contact" />
+
+        <Button
+            android:id="@+id/gallery"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:text="Gallery" />
+
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="408dp"
+
+        android:layout_height="297dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -54,7 +92,7 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
 
-                android:src="@drawable/y" />
+                android:src="@drawable/a" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -62,7 +100,7 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
 
-                android:src="@drawable/t" />
+                android:src="@drawable/b" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -70,7 +108,7 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
 
-                android:src="@drawable/r" />
+                android:src="@drawable/c" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -87,8 +125,25 @@
                 android:scaleType="fitStart"
 
 
-                android:src="@drawable/l" />
+                android:src="@drawable/e" />
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+
+
+                android:src="@drawable/f" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+
+
+                android:src="@drawable/g" />
 
         </LinearLayout>
 

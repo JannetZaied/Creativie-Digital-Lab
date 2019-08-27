@@ -9,15 +9,52 @@
     tools:context=".ui.ActivityContact">
 
     <LinearLayout
-        android:layout_width="419dp"
-        android:layout_height="356dp"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+
+
+        android:layout_marginTop="332dp"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499">
+
+        <Button
+            android:id="@+id/aboutus"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="About US" />
+
+        <Button
+            android:id="@+id/contact"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:text="Contact" />
+
+        <Button
+            android:id="@+id/gallery"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:text="Gallery" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="417dp"
+        android:layout_height="326dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="-4dp">
+        tools:layout_editor_absoluteX="-8dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -126,113 +163,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!--TextView
-        android:id="@+id/site"
-        android:layout_width="232dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="398dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/Link_to_site"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.345"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_conversion_wrapHeight="123"
-        tools:layout_conversion_wrapWidth="349" />
-
-    <TextView
-        android:id="@+id/in"
-        android:layout_width="234dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="448dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/Link_to_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.355"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_conversion_wrapHeight="123"
-        tools:layout_conversion_wrapWidth="349" />
-
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="231dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="+216 70 028 343 / +216 54 137 708"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.348"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.714"
-        tools:layout_conversion_wrapHeight="123"
-        tools:layout_conversion_wrapWidth="349" />
-
-    <TextView
-        android:id="@+id/fb"
-        android:layout_width="240dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/Link_to_Fb"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.361"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.777"
-        tools:layout_conversion_wrapHeight="123"
-        tools:layout_conversion_wrapWidth="349" />
-
-    <TextView
-        android:id="@+id/mail"
-        android:layout_width="213dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="contact@creativedigital-lab.tn "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853"
-        tools:layout_conversion_wrapHeight="123"
-        tools:layout_conversion_wrapWidth="349" />
-
-    <TextView
-        android:id="@+id/adr"
-        android:layout_width="266dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Avenue Mohamed 5, Tunis 2022,Tunisie Cité de la Culture"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925"
-        tools:layout_conversion_wrapHeight="123"
-        tools:layout_conversion_wrapWidth="349" /-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

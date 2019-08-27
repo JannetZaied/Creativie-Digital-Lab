@@ -8,56 +8,41 @@
     android:background="@drawable/louta"
     tools:context=".ui.HomeActivity">
 
-    <Button
-        android:id="@+id/aboutUs"
-        android:text="About Us"
-        android:layout_width="93dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="36dp"
-        android:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
 
-    <Button
-        android:id="@+id/Contact"
-        android:layout_width="93dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginLeft="168dp"
-        android:text="Contact"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939" />
 
-    <Button
-        android:id="@+id/Gallery"
-        android:text="Gallery"
-        android:layout_width="94dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="668dp"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939" />
+        app:layout_constraintVertical_bias="0.499">
+
+        <Button
+            android:id="@+id/aboutus"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="About US" />
+
+        <Button
+            android:id="@+id/contact"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:text="Contact" />
+
+        <Button
+            android:id="@+id/gallery"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:text="Gallery" />
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
