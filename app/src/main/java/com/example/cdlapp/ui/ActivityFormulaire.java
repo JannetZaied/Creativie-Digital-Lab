@@ -1,20 +1,21 @@
 package com.example.cdlapp.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cdlapp.R;
 
 public class ActivityFormulaire extends AppCompatActivity {
-    Button SignUp, Login;
+    Button Login;
+    ImageButton SignUp;
     EditText name, email, password;
     RadioButton student, entrepreneur;
     boolean st ,ent;
@@ -75,12 +76,7 @@ public class ActivityFormulaire extends AppCompatActivity {
 
                 });
         }}
-      /*  Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("é")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        jsonPlaceHolderApi= retrofit.create(JsonPlaceHolderApi.class);
-        createUser();*/
+
 
 
 

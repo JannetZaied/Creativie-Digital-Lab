@@ -1,4 +1,6 @@
 package Model;
 
-public class Events extends Post {
+public class Events {
+    private String name;
+
 }

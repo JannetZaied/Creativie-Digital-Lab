@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.cdlapp.R;
 
 public class HomeActivity extends AppCompatActivity {
-    Button AboutUs,Contact,Gallery ;
+    Button AboutUs, Contact, Gallery, Equipments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class HomeActivity extends AppCompatActivity {
         AboutUs = findViewById(R.id.aboutus);
         Contact = findViewById(R.id.contact);
         Gallery = findViewById(R.id.gallery);
+        Equipments = findViewById(R.id.equip);
         AboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,6 +39,14 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(HomeActivity.this, ActivityGallery.class);
+                startActivity(i);
+            }
+
+        });
+        Equipments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomeActivity.this, Activityequipments.class);
                 startActivity(i);
             }
         });

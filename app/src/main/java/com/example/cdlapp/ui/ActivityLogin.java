@@ -1,21 +1,21 @@
 package com.example.cdlapp.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cdlapp.R;
 
 public class ActivityLogin extends AppCompatActivity {
     EditText name;
     EditText pass;
-    Button btn1, btn2;
-
+    Button btn2;
+    ImageButton btn1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
