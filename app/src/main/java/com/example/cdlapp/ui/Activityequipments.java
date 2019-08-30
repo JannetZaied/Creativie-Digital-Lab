@@ -27,6 +27,7 @@ public class Activityequipments extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activityequipments);
         Equipments = new ArrayList<>();
+        //TODO: equipments e = new equipments;
         Equipments.add(new Equipment(R.drawable.b, "Pc gamer", "It is good", "3dt/h"));
         Equipments.add(new Equipment(R.drawable.f, "Pc gamer", "It is good", "3dt/h"));
         Equipments.add(new Equipment(R.drawable.g, "Pc gamer", "It is good", "3dt/h"));
