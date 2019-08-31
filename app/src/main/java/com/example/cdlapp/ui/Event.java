@@ -33,8 +33,9 @@ public class Event extends AppCompatActivity {
     ArrayList<Events> Event;
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
-    private TextView Title, Desc, Date, Price;
+    String UrlEvent = "http://10.10.29.17:8090/events";
     private RequestQueue eventQueue;
+    private TextView Title, Desc, Date, Price, Deadline, Formateur;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,8 @@ public class Event extends AppCompatActivity {
         Date = findViewById(R.id.dateevent);
         Price = findViewById(R.id.priceevent);
         event = findViewById(R.id.event);
+        Deadline = findViewById(R.id.deadline);
+        Formateur = findViewById(R.id.formateur);
         eventQueue = Volley.newRequestQueue(this);
         event.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,25 +58,30 @@ public class Event extends AppCompatActivity {
     }
 
     private void jsonGetEvent() {
-        String Url = "";
-        JsonObjectRequest requestEvent = new JsonObjectRequest(Request.Method.GET, Url, null,
+
+        JsonObjectRequest requestEvent = new JsonObjectRequest(Request.Method.GET, UrlEvent, null,
                 new Response.Listener<JSONObject>() {
                     @Override
-                    public void onResponse(JSONObject response) {
+                    public void onResponse(JSONObject response) { // 1 STRING
                         //  JsonArray eventArray;
                         try {
                             // JSONArray jsonArrayEvent=new JSONArray(response);
                             JSONArray jsonArrayEvent = response.getJSONArray("events");
                             for (int i = 0; i < (jsonArrayEvent).length(); i++) {
                                 JSONObject Event = jsonArrayEvent.getJSONObject(i);
-                                String title = Event.getString("title");
-                                String date = Event.getString("date");
-                                String descp = Event.getString("description");
+
+                                String title = Event.getString("id");//ybadeli el evnt with a title
+                                String date = Event.getString("event_date");
+                                String deadline = Event.getString("deadline_to_applay");
+                                String formateur = Event.getString("formateur_linkedin_url");
+                                String descp = Event.getString("username");//yaamli description
                                 String price = Event.getString("price");
                                 Title.append(title);
                                 Desc.append(descp);
                                 Date.append(date);
                                 Price.append(price);
+                                Formateur.append(formateur);
+                                Deadline.append(deadline);
 
 
                             }

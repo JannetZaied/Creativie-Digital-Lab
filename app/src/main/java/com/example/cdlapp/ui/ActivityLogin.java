@@ -34,11 +34,7 @@ public class ActivityLogin extends AppCompatActivity {
                 Intent i = new Intent(ActivityLogin.this, HomeActivity.class);
                 startActivity(i);
             }
-            //  else {Toast.makeText(ActivityLogin.this,"Wrong username and password",Toast.LENGTH_LONG).show();
-            //}
 
-
-            // }
 
         });
         btn2.setOnClickListener(new View.OnClickListener() {
@@ -51,3 +47,65 @@ public class ActivityLogin extends AppCompatActivity {
 
     }
 }
+//    public void loginVerif(View view)
+//    {
+//        RequestQueue requestLogin= Volley.newRequestQueue(ActivityLogin.this);
+//        String UrlLogin="";//Url from hedi
+//        StringRequest postRequestLogin= new StringRequest(Request.Method.POST, UrlLogin,
+//                new Response.Listener<String>() {
+//                    @Override
+//                    public void onResponse(String response) {
+//                        Log.d("APPLOG",response);
+//                        JsonLogin(response);
+//                    }
+//                },
+//                new Response.ErrorListener() {
+//                    @Override
+//                    public void onErrorResponse(VolleyError error) {
+//                        Log.d("APPLOG",error.toString());
+//
+//                    }
+//                }
+//                )
+//        {     //@Override
+//                protected Map<String,String> getAnswer(){
+//            Map <String,String> answer= new HashMap<String,String>();
+//            answer.put("post-mail",name.getText().toString().trim());
+//            answer.put("post-pass",pass.getText().toString().trim());
+//            return answer;
+//
+//                }
+//        };
+//
+//requestLogin.add(postRequestLogin);
+//    }
+//
+//
+//
+//    public void JsonLogin(String jsonLogin)
+//    {
+//        JSONObject jsonObject =null;
+//        try {
+//            jsonObject = new JSONObject(jsonLogin);
+//            if (jsonObject.get("LOGIN").equals("ok")) {
+//                Toast.makeText(this,"Welcome To CReative Digital Lab",Toast.LENGTH_LONG).show();
+//                btn1.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//          public void onClick(View view) {
+//
+//               Intent i = new Intent(ActivityLogin.this, HomeActivity.class);
+//               startActivity(i);
+//           }
+//
+//
+//     });
+//            }
+//
+//
+//            else { Toast.makeText(this,"Login failed,verifiy your inputs",Toast.LENGTH_LONG).show();
+//                      }
+//
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//}}

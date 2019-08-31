@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ public class ActivityFormulaire extends AppCompatActivity {
     ImageButton SignUp;
     EditText name, email, password;
     RadioButton student, entrepreneur;
+    RadioGroup group;
     boolean st ,ent;
     String emailPattern="[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
@@ -32,6 +34,7 @@ public class ActivityFormulaire extends AppCompatActivity {
         password = findViewById(R.id.passwordEditText);
         student = findViewById(R.id.studentCheck);
         entrepreneur = findViewById(R.id.entrepreneur);
+        group = findViewById(R.id.group);
         st=student.isChecked();
         ent=entrepreneur.isChecked();
         Login.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +79,102 @@ public class ActivityFormulaire extends AppCompatActivity {
 
                 });
         }}
-
+//    EditText name;
+//    EditText pass;
+//    Button btn2;
+//    ImageButton btn1;
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        getSupportActionBar().hide();
+//        setContentView(R.layout.activity_login);
+//        name = findViewById(R.id.email);
+//        pass = findViewById(R.id.password);
+//        btn1 = findViewById(R.id.login);
+//        btn2 = findViewById(R.id.signUp);
+//
+//        btn1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                // if (name.getText().toString().equals("Jannet")&&pass.getText().toString().equals("1234"))
+//                // { I should verify if it is a correct email (existing already in the base +password : Api from hedi
+//                Intent i = new Intent(ActivityLogin.this, HomeActivity.class);
+//                startActivity(i);
+//            }
+//
+//
+//        });
+//        btn2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(ActivityLogin.this, ActivityFormulaire.class);
+//                startActivity(i);
+//            }
+//        });
+//
+//    }}
+//    public void loginVerif(View view)
+//    {
+//        RequestQueue requestLogin= Volley.newRequestQueue(ActivityLogin.this);
+//        String UrlLogin="";//Url from hedi
+//        StringRequest postRequestLogin= new StringRequest(Request.Method.POST, UrlLogin,
+//                new Response.Listener<String>() {
+//                    @Override
+//                    public void onResponse(String response) {
+//                        Log.d("APPLOG",response);
+//                        JsonLogin(response);
+//                    }
+//                },
+//                new Response.ErrorListener() {
+//                    @Override
+//                    public void onErrorResponse(VolleyError error) {
+//                        Log.d("APPLOG",error.toString());
+//
+//                    }
+//                }
+//                )
+//        {     //@Override
+//                protected Map<String,String> getAnswer(){
+//            Map <String,String> answer= new HashMap<String,String>();
+//            answer.put("post-mail",name.getText().toString().trim());
+//            answer.put("post-pass",pass.getText().toString().trim());
+//            return answer;
+//
+//                }
+//        };
+//
+//requestLogin.add(postRequestLogin);
+//    }
+//
+//
+//
+//    public void JsonLogin(String jsonLogin)
+//    {
+//        JSONObject jsonObject =null;
+//        try {
+//            jsonObject = new JSONObject(jsonLogin);
+//            if (jsonObject.get("LOGIN").equals("ok")) {
+//                Toast.makeText(this,"Welcome To CReative Digital Lab",Toast.LENGTH_LONG).show();
+//                btn1.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//          public void onClick(View view) {
+//
+//               Intent i = new Intent(ActivityLogin.this, HomeActivity.class);
+//               startActivity(i);
+//           }
+//
+//
+//     });
+//            }
+//
+//
+//            else { Toast.makeText(this,"Login failed,verifiy your inputs",Toast.LENGTH_LONG).show();
+//                      }
+//
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//}}
 
 
 

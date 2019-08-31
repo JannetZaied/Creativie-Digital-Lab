@@ -21,8 +21,8 @@ public class AdapterEvents extends PagerAdapter {
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public AdapterEvents(ArrayList<Events> equipments, Context context) {
-        this.Events = equipments;
+    public AdapterEvents(ArrayList<Events> events, Context context) {
+        this.Events = events;
         this.context = context;
     }
 
@@ -42,17 +42,21 @@ public class AdapterEvents extends PagerAdapter {
         layoutInflater = LayoutInflater.from(context);
         View view = layoutInflater.inflate(R.layout.event, container, false);
         ImageView imageView;
-        TextView name, desc, price, date;
+        TextView name, desc, price, date, deadline, formateur;
         imageView = view.findViewById(R.id.image);
         name = view.findViewById(R.id.titleevent);
         desc = view.findViewById(R.id.descriptionevent);
         price = view.findViewById(R.id.priceevent);
         date = view.findViewById(R.id.dateevent);
+        deadline = view.findViewById(R.id.deadline);
+        formateur = view.findViewById(R.id.formateur);
         imageView.setImageResource(Events.get(position).getId());
         name.setText(Events.get(position).getName());
         desc.setText(Events.get(position).getDescription());
         price.setText(Events.get(position).getPrice());
         date.setText(Events.get(position).getDate());
+        formateur.setText(Events.get(position).getFormateur());
+        deadline.setText(Events.get(position).getDeadlineToApply());
         container.addView(view, 0);
         return view;
     }
