@@ -6,11 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/louta"
-    tools:context=".ui.Event">
+    tools:context=".ui.ActivityEvent">
 
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager1"
+        android:id="@+id/viewPager2"
         android:layout_width="match_parent"
         android:layout_height="386dp"
         android:layout_marginTop="8dp"
@@ -19,7 +19,7 @@
         android:overScrollMode="never"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
@@ -33,14 +33,14 @@
         android:layout_marginStart="135dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="158dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="68dp"
         android:text="Get Your ticket"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.342"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/viewPager1"
-        app:layout_constraintVertical_bias="0.814" />
+        app:layout_constraintTop_toTopOf="@+id/viewPager2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <LinearLayout
         android:id="@+id/linearLayout"

@@ -26,14 +26,15 @@
     </androidx.viewpager.widget.ViewPager>
 
     <Button
-        android:id="@+id/oder"
+        android:id="@+id/order"
         android:layout_width="126dp"
         android:layout_height="41dp"
         android:layout_marginStart="135dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="158dp"
         android:layout_marginBottom="8dp"
-        android:text="Book a place"
+        android:text="Book equipment"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

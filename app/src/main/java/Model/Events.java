@@ -11,8 +11,10 @@ public class Events {
     private String price;
     private String DeadlineToApply;
     private String Formateur;
+    int a;
 
-    public Events(String name, String description, String date, String price, String deadlineToApply, String formateur) {
+    public Events(int a, String name, String description, String date, String price, String deadlineToApply, String formateur) {
+        this.a = a;
         Id = count.incrementAndGet();
         this.name = name;
         Description = description;
@@ -20,6 +22,10 @@ public class Events {
         this.price = price;
         DeadlineToApply = deadlineToApply;
         Formateur = formateur;
+    }
+
+    public int getA() {
+        return a;
     }
 
     public String getFormateur() {

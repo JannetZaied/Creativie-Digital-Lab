@@ -79,50 +79,17 @@ public class ActivityFormulaire extends AppCompatActivity {
 
                 });
         }}
-//    EditText name;
-//    EditText pass;
-//    Button btn2;
-//    ImageButton btn1;
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        getSupportActionBar().hide();
-//        setContentView(R.layout.activity_login);
-//        name = findViewById(R.id.email);
-//        pass = findViewById(R.id.password);
-//        btn1 = findViewById(R.id.login);
-//        btn2 = findViewById(R.id.signUp);
-//
-//        btn1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // if (name.getText().toString().equals("Jannet")&&pass.getText().toString().equals("1234"))
-//                // { I should verify if it is a correct email (existing already in the base +password : Api from hedi
-//                Intent i = new Intent(ActivityLogin.this, HomeActivity.class);
-//                startActivity(i);
-//            }
-//
-//
-//        });
-//        btn2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(ActivityLogin.this, ActivityFormulaire.class);
-//                startActivity(i);
-//            }
-//        });
-//
-//    }}
-//    public void loginVerif(View view)
+//********sending a request to the api in the back end to verify if the email exits already and blabla ..and then getiing the confirmation back
+//    public void SignUpVerif(View view)
 //    {
-//        RequestQueue requestLogin= Volley.newRequestQueue(ActivityLogin.this);
-//        String UrlLogin="";//Url from hedi
-//        StringRequest postRequestLogin= new StringRequest(Request.Method.POST, UrlLogin,
+//        RequestQueue requestSignUp= Volley.newRequestQueue(ActivityFormulaire.this);
+//        String UrlSignUp="";//Url from hedi
+//        StringRequest postRequestSignUp= new StringRequest(Request.Method.POST, UrlSignUp,
 //                new Response.Listener<String>() {
 //                    @Override
 //                    public void onResponse(String response) {
 //                        Log.d("APPLOG",response);
-//                        JsonLogin(response);
+//                        JsonSignUp(response);
 //                    }
 //                },
 //                new Response.ErrorListener() {
@@ -136,26 +103,27 @@ public class ActivityFormulaire extends AppCompatActivity {
 //        {     //@Override
 //                protected Map<String,String> getAnswer(){
 //            Map <String,String> answer= new HashMap<String,String>();
-//            answer.put("post-mail",name.getText().toString().trim());
-//            answer.put("post-pass",pass.getText().toString().trim());
+//            answer.put("post-name"name.getText().toString().trim());
+//            answer.put("post-mail",email.getText().toString().trim());
+//            answer.put("post-pass",password.getText().toString().trim());
 //            return answer;
 //
 //                }
 //        };
 //
-//requestLogin.add(postRequestLogin);
+//requestSignUp.add(postRequestSignUp);
 //    }
 //
 //
 //
-//    public void JsonLogin(String jsonLogin)
+//    public void JsonSignUp(String jsonSignUp
 //    {
 //        JSONObject jsonObject =null;
 //        try {
-//            jsonObject = new JSONObject(jsonLogin);
-//            if (jsonObject.get("LOGIN").equals("ok")) {
-//                Toast.makeText(this,"Welcome To CReative Digital Lab",Toast.LENGTH_LONG).show();
-//                btn1.setOnClickListener(new View.OnClickListener() {
+//            jsonObject = new JSONObject(jsonSignUp);
+//            if (jsonObject.get("SignUp").equals("ok")) {//selon code hedi (backend)
+//                Toast.makeText(this,"Welcome To Creative Digital Lab",Toast.LENGTH_LONG).show();
+//                SignUp.setOnClickListener(new View.OnClickListener() {
 //                    @Override
 //          public void onClick(View view) {
 //
@@ -167,15 +135,12 @@ public class ActivityFormulaire extends AppCompatActivity {
 //     });
 //            }
 //
-//
-//            else { Toast.makeText(this,"Login failed,verifiy your inputs",Toast.LENGTH_LONG).show();
+//            else if (jsonObject.get("SignUp").equals("exists"))
+//            {Toast.makeText(this,"This email is already Used , Try again",Toast.LENGTH_LONG).show();}
+//            else { Toast.makeText(this,"SignUp failed,verifiy your inputs",Toast.LENGTH_LONG).show();
 //                      }
 //
 //        } catch (JSONException e) {
 //            e.printStackTrace();
 //        }
 //}}
-
-
-
-

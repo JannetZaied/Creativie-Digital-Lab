@@ -43,14 +43,15 @@ public class AdapterEvents extends PagerAdapter {
         View view = layoutInflater.inflate(R.layout.event, container, false);
         ImageView imageView;
         TextView name, desc, price, date, deadline, formateur;
-        imageView = view.findViewById(R.id.image);
+        imageView = view.findViewById(R.id.imageEv);
         name = view.findViewById(R.id.titleevent);
         desc = view.findViewById(R.id.descriptionevent);
         price = view.findViewById(R.id.priceevent);
         date = view.findViewById(R.id.dateevent);
         deadline = view.findViewById(R.id.deadline);
         formateur = view.findViewById(R.id.formateur);
-        imageView.setImageResource(Events.get(position).getId());
+        imageView.setImageResource(Events.get(position).getA());
+        System.out.println("event img code" + Events.get(position).getA());
         name.setText(Events.get(position).getName());
         desc.setText(Events.get(position).getDescription());
         price.setText(Events.get(position).getPrice());

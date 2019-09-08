@@ -16,24 +16,24 @@
         app:cardCornerRadius="25dp">
 
         <RelativeLayout
-            android:layout_width="402dp"
-            android:layout_height="335dp">
+            android:layout_width="match_parent"
+            android:layout_height="270dp">
 
             <ImageView
-                android:id="@+id/image"
+                android:id="@+id/imageEv"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:scaleType="centerCrop"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/a" />
 
             <TextView
                 android:id="@+id/titleevent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/image"
+                android:layout_below="@id/imageEv"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="6dp"
-                android:text="Pc"
+                android:text="titleevent"
                 android:textSize="18sp" />
 
             <TextView
@@ -43,7 +43,7 @@
                 android:layout_below="@id/titleevent"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="4dp"
-                android:text="50"
+                android:text="dateevent"
                 android:textSize="15sp" />
 
             <TextView
@@ -64,7 +64,7 @@
                 android:layout_below="@id/descriptionevent"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="4dp"
-                android:text="khaled"
+                android:text="formateur"
                 android:textSize="15sp" />
 
 
@@ -75,7 +75,7 @@
                 android:layout_below="@id/formateur"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="4dp"
-                android:text="20/01/02"
+                android:text="deadline"
                 android:textSize="15sp" />
             <TextView
                 android:id="@+id/priceevent"
@@ -84,7 +84,7 @@
                 android:layout_below="@id/deadline"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="4dp"
-                android:text="50"
+                android:text="price"
                 android:textSize="15sp" />
 
 

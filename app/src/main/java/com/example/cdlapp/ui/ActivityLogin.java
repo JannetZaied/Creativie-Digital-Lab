@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +17,7 @@ public class ActivityLogin extends AppCompatActivity {
     EditText pass;
     Button btn2;
     ImageButton btn1;
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,10 +31,15 @@ public class ActivityLogin extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (!(name.getText().toString().isEmpty()) && (name.getText().toString().trim().matches(emailPattern)) && !(name.getText().toString().isEmpty()) && !(pass.getText().toString().isEmpty()))
                 // if (name.getText().toString().equals("Jannet")&&pass.getText().toString().equals("1234"))
                 // { I should verify if it is a correct email (existing already in the base +password : Api from hedi
-                Intent i = new Intent(ActivityLogin.this, HomeActivity.class);
-                startActivity(i);
+                {
+                    Intent i = new Intent(ActivityLogin.this, HomeActivity.class);
+                    startActivity(i);
+                } else {
+                    Toast.makeText(ActivityLogin.this, "Verify your inputs please", Toast.LENGTH_SHORT).show();
+                }
             }
 
 

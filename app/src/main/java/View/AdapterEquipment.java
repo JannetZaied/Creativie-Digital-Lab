@@ -17,12 +17,12 @@ import java.util.ArrayList;
 import Model.Equipment;
 
 
-public class AdpterEquipment extends PagerAdapter {
+public class AdapterEquipment extends PagerAdapter {
     private ArrayList<Equipment> Equipments;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public AdpterEquipment(ArrayList<Equipment> equipments, Context context) {
+    public AdapterEquipment(ArrayList<Equipment> equipments, Context context) {
         this.Equipments = equipments;
         this.context = context;
     }
@@ -43,14 +43,14 @@ public class AdpterEquipment extends PagerAdapter {
         layoutInflater = LayoutInflater.from(context);
         View view = layoutInflater.inflate(R.layout.item, container, false);
         ImageView imageView;
-        TextView title, desc, price;
+        TextView title, refrence, price;
         imageView = view.findViewById(R.id.image);
         title = view.findViewById(R.id.title);
-        desc = view.findViewById(R.id.description);
+        refrence = view.findViewById(R.id.refrence);
         price = view.findViewById(R.id.price);
-        imageView.setImageResource(Equipments.get(position).getRefrence());
+        imageView.setImageResource(Equipments.get(position).getA());
         title.setText(Equipments.get(position).getTitle());
-        desc.setText(Equipments.get(position).getDescription());
+        refrence.setText(Equipments.get(position).getRefrence());
         price.setText(Equipments.get(position).getPrice());
 
         container.addView(view, 0);

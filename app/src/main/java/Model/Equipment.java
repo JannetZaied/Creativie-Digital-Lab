@@ -1,24 +1,23 @@
 package Model;
 
 public class Equipment {
-    private int refrence;
-    private String title, description;
+    int a;
+    private String refrence;
     private String price;
+    private String title;
 
 
-    public Equipment(int refrence, String title, String description, String price) {
+    public Equipment(int a, String refrence, String title, String price) {
         this.refrence = refrence;
         this.title = title;
         this.price = price;
-        this.description = description;
+        this.a = a;
+
     }
 
-    public String getDescription() {
-        return description;
-    }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public int getA() {
+        return a;
     }
 
     public String getPrice() {
@@ -29,11 +28,11 @@ public class Equipment {
         this.price = price;
     }
 
-    public int getRefrence() {
+    public String getRefrence() {
         return refrence;
     }
 
-    public void setRefrence(int refrence) {
+    public void setRefrence(String refrence) {
         this.refrence = refrence;
     }
 

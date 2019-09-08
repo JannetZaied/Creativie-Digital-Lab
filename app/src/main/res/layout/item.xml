@@ -25,7 +25,7 @@
                 android:id="@+id/image"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/a" />
 
             <TextView
@@ -39,7 +39,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title"
@@ -49,10 +49,10 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/price"
+                android:id="@+id/refrence"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/description"
+                android:layout_below="@id/price"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="4dp"
                 android:text="50"
